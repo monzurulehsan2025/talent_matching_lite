@@ -11,7 +11,18 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+import { useState } from 'react';
+import { EditUserProfileModal } from './EditUserProfileModal';
+
 export function Topbar() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [user, setUser] = useState({
+        name: 'Alex Rivera',
+        role: 'Talent Manager',
+        email: 'alex.rivera@andela.com',
+        location: 'Austin, TX'
+    });
+
     return (
         <header className="fixed top-0 right-0 left-0 md:left-64 h-20 bg-white/80 backdrop-blur-md border-b border-slate-200 z-40 flex items-center justify-between px-6 transition-all duration-300">
             <div className="flex items-center gap-6 w-1/2">
@@ -39,16 +50,26 @@ export function Topbar() {
                     <HelpCircle className="h-5 w-5" />
                 </button>
                 <div className="h-8 w-px bg-slate-200 mx-1"></div>
-                <div className="flex items-center gap-3 pl-2">
+                <div
+                    className="flex items-center gap-3 pl-2 cursor-pointer group hover:bg-slate-50 p-2 rounded-2xl transition-all"
+                    onClick={() => setIsModalOpen(true)}
+                >
                     <div className="text-right hidden sm:block">
-                        <p className="text-sm font-semibold text-slate-900 leading-tight">Alex Rivera</p>
-                        <p className="text-xs text-slate-500 font-medium leading-tight text-right">Talent Manager</p>
+                        <p className="text-sm font-semibold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors">{user.name}</p>
+                        <p className="text-xs text-slate-500 font-medium leading-tight text-right">{user.role}</p>
                     </div>
-                    <div className="h-10 w-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md cursor-pointer hover:shadow-lg transition-shadow">
-                        <UserCircle className="h-7 w-7" />
+                    <div className="h-10 w-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md cursor-pointer hover:shadow-lg transition-all group-hover:scale-110">
+                        {user.name.charAt(0)}
                     </div>
                 </div>
             </div>
+
+            <EditUserProfileModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                user={user}
+                onSave={setUser}
+            />
         </header>
     );
 }

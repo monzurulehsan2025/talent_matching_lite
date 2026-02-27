@@ -1,12 +1,18 @@
 'use client';
 
-import React from 'react';
-import { people } from './data/people';
+import React, { useState } from 'react';
+import { people as initialPeople, Person } from './data/people';
 import { StatCards } from '@/components/dashboard/StatCards';
 import { PeopleTable } from '@/components/dashboard/PeopleTable';
 import { ArrowRight, Download, Filter, Plus, Users } from 'lucide-react';
 
 export default function Dashboard() {
+  const [people, setPeople] = useState<Person[]>(initialPeople);
+
+  const handleUpdatePerson = (updatedPerson: Person) => {
+    setPeople(prev => prev.map(p => p.id === updatedPerson.id ? updatedPerson : p));
+  };
+
   return (
     <div className="space-y-10">
       {/* Header Section */}
@@ -62,7 +68,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <PeopleTable people={people} />
+        <PeopleTable people={people} onUpdatePerson={handleUpdatePerson} />
       </section>
 
       {/* Footer / Info */}

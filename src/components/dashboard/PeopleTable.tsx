@@ -17,17 +17,29 @@ import { Person, AvailabilityStatus } from '@/app/data/people';
 import { Badge } from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 
+import { EditTalentModal } from './EditTalentModal';
+
 interface PeopleTableProps {
     people: Person[];
+    onUpdatePerson: (person: Person) => void;
 }
 
-export function PeopleTable({ people }: PeopleTableProps) {
+export function PeopleTable({ people, onUpdatePerson }: PeopleTableProps) {
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState<AvailabilityStatus | 'All'>('All');
     const [sortConfig, setSortConfig] = useState<{
         key: keyof Person;
         direction: 'asc' | 'desc'
     } | null>(null);
+
+    // Modal State
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
+
+    const handleEdit = (person: Person) => {
+        setSelectedPerson(person);
+        setIsEditModalOpen(true);
+    };
 
     const filteredAndSortedPeople = useMemo(() => {
         let result = [...people];
@@ -173,6 +185,9 @@ export function PeopleTable({ people }: PeopleTableProps) {
                                         <ArrowUpDown className="h-3 w-3" />
                                     </div>
                                 </th>
+                                <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">
+                                    Actions
+                                </th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -243,6 +258,15 @@ export function PeopleTable({ people }: PeopleTableProps) {
                                                 <span className="text-[11px] font-bold text-slate-900">{person.performanceRating}.0 / 5.0</span>
                                             </div>
                                         </td>
+                                        <td className="px-6 py-5 text-right">
+                                            <button
+                                                onClick={() => handleEdit(person)}
+                                                className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                                                title="Edit Profile"
+                                            >
+                                                <MoreVertical className="h-5 w-5" />
+                                            </button>
+                                        </td>
                                     </tr>
                                 ))
                             ) : (
@@ -267,6 +291,13 @@ export function PeopleTable({ people }: PeopleTableProps) {
                     </table>
                 </div>
             </div>
+
+            <EditTalentModal
+                isOpen={isEditModalOpen}
+                onClose={() => setIsEditModalOpen(false)}
+                person={selectedPerson}
+                onSave={onUpdatePerson}
+            />
         </div>
     );
 }
