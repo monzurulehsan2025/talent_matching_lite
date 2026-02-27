@@ -3,12 +3,13 @@ use strict;
 use warnings;
 use IO::Socket;
 use JSON;
+use FindBin;
 
 # Port to listen on
 my $port = 3001;
 
 # Data file
-my $json_file = 'people.json';
+my $json_file = "$FindBin::Bin/people.json";
 
 # Ensure data file exists
 unless (-e $json_file) {
