@@ -4,13 +4,19 @@ import React, { useState } from 'react';
 import { people as initialPeople, Person } from './data/people';
 import { StatCards } from '@/components/dashboard/StatCards';
 import { PeopleTable } from '@/components/dashboard/PeopleTable';
+import { AddTalentModal } from '@/components/dashboard/AddTalentModal';
 import { ArrowRight, Download, Filter, Plus, Users } from 'lucide-react';
 
 export default function Dashboard() {
   const [people, setPeople] = useState<Person[]>(initialPeople);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   const handleUpdatePerson = (updatedPerson: Person) => {
     setPeople(prev => prev.map(p => p.id === updatedPerson.id ? updatedPerson : p));
+  };
+
+  const handleAddPerson = (newPerson: Person) => {
+    setPeople(prev => [newPerson, ...prev]);
   };
 
   return (
@@ -35,7 +41,10 @@ export default function Dashboard() {
             <Download className="h-4 w-4" />
             Export Data
           </button>
-          <button className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-2xl text-sm font-bold hover:bg-blue-700 shadow-lg shadow-blue-500/20 transition-all border border-blue-500">
+          <button
+            onClick={() => setIsAddModalOpen(true)}
+            className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-2xl text-sm font-bold hover:bg-blue-700 shadow-lg shadow-blue-500/20 transition-all border border-blue-500"
+          >
             <Plus className="h-4 w-4" />
             Add Talent
           </button>
@@ -77,6 +86,12 @@ export default function Dashboard() {
           &copy; {new Date().getFullYear()} Talent Ops Dashboard. All rights reserved.
         </p>
       </footer>
+
+      <AddTalentModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onAdd={handleAddPerson}
+      />
     </div>
   );
 }
