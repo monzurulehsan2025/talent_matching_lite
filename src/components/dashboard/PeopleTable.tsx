@@ -11,7 +11,8 @@ import {
     Filter,
     ArrowUpDown,
     MoreVertical,
-    Briefcase
+    Briefcase,
+    Trash2
 } from 'lucide-react';
 import { Person, AvailabilityStatus } from '@/app/data/people';
 import { Badge } from '@/components/ui/Badge';
@@ -22,9 +23,10 @@ import { EditTalentModal } from './EditTalentModal';
 interface PeopleTableProps {
     people: Person[];
     onUpdatePerson: (person: Person) => void;
+    onDeletePerson: (id: string) => void;
 }
 
-export function PeopleTable({ people, onUpdatePerson }: PeopleTableProps) {
+export function PeopleTable({ people, onUpdatePerson, onDeletePerson }: PeopleTableProps) {
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState<AvailabilityStatus | 'All'>('All');
     const [sortConfig, setSortConfig] = useState<{
@@ -259,13 +261,22 @@ export function PeopleTable({ people, onUpdatePerson }: PeopleTableProps) {
                                             </div>
                                         </td>
                                         <td className="px-6 py-5 text-right">
-                                            <button
-                                                onClick={() => handleEdit(person)}
-                                                className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
-                                                title="Edit Profile"
-                                            >
-                                                <MoreVertical className="h-5 w-5" />
-                                            </button>
+                                            <div className="flex items-center justify-end gap-1">
+                                                <button
+                                                    onClick={() => handleEdit(person)}
+                                                    className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                                                    title="Edit Profile"
+                                                >
+                                                    <MoreVertical className="h-5 w-5" />
+                                                </button>
+                                                <button
+                                                    onClick={() => onDeletePerson(person.id)}
+                                                    className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all"
+                                                    title="Delete Talent"
+                                                >
+                                                    <Trash2 className="h-5 w-5" />
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 ))

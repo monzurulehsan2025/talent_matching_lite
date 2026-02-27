@@ -19,6 +19,12 @@ export default function Dashboard() {
     setPeople(prev => [newPerson, ...prev]);
   };
 
+  const handleDeletePerson = (id: string) => {
+    if (window.confirm('Are you sure you want to remove this talent from the pool?')) {
+      setPeople(prev => prev.filter(p => p.id !== id));
+    }
+  };
+
   return (
     <div className="space-y-10">
       {/* Header Section */}
@@ -77,7 +83,11 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <PeopleTable people={people} onUpdatePerson={handleUpdatePerson} />
+        <PeopleTable
+          people={people}
+          onUpdatePerson={handleUpdatePerson}
+          onDeletePerson={handleDeletePerson}
+        />
       </section>
 
       {/* Footer / Info */}
