@@ -1,0 +1,341 @@
+[
+  {
+    "id": "1",
+    "fullName": "Sophia Rodriguez",
+    "role": "Senior Ruby on Rails Engineer",
+    "location": "Austin, TX",
+    "timezone": "UTC-6",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 12,
+    "lastActiveDate": "2024-05-15",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Ruby",
+      "Rails",
+      "PostgreSQL",
+      "Redis"
+    ]
+  },
+  {
+    "id": "2",
+    "fullName": "Liam Chen",
+    "role": "Full Stack Developer",
+    "location": "Vancouver, BC",
+    "timezone": "UTC-8",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 95,
+    "lastActiveDate": "2024-05-20",
+    "performanceRating": 4,
+    "primarySkills": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "AWS"
+    ]
+  },
+  {
+    "id": "3",
+    "fullName": "Emma Wilson",
+    "role": "Frontend Architect",
+    "location": "London, UK",
+    "timezone": "UTC+1",
+    "availabilityStatus": "Limited",
+    "utilizationPercent": 60,
+    "lastActiveDate": "2024-05-18",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Next.js",
+      "Tailwind",
+      "Three.js",
+      "Design Systems"
+    ]
+  },
+  {
+    "id": "4",
+    "fullName": "Noah Garcia",
+    "role": "DevOps Engineer",
+    "location": "Madrid, Spain",
+    "timezone": "UTC+2",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 0,
+    "lastActiveDate": "2024-05-10",
+    "performanceRating": 3,
+    "primarySkills": [
+      "Terraform",
+      "Kubernetes",
+      "CI/CD",
+      "Azure"
+    ]
+  },
+  {
+    "id": "5",
+    "fullName": "Olivia Kim",
+    "role": "Product Designer",
+    "location": "Seoul, KR",
+    "timezone": "UTC+9",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 100,
+    "lastActiveDate": "2024-05-19",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Figma",
+      "User Research",
+      "Prototyping",
+      "Accessibility"
+    ]
+  },
+  {
+    "id": "6",
+    "fullName": "Ethan Brown",
+    "role": "Backend Developer",
+    "location": "Berlin, DE",
+    "timezone": "UTC+2",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 20,
+    "lastActiveDate": "2024-05-21",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Python",
+      "Django",
+      "GraphQL",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "7",
+    "fullName": "Ava Martinez",
+    "role": "Mobile Lead",
+    "location": "Mexico City, MX",
+    "timezone": "UTC-6",
+    "availabilityStatus": "Limited",
+    "utilizationPercent": 75,
+    "lastActiveDate": "2024-05-22",
+    "performanceRating": 5,
+    "primarySkills": [
+      "React Native",
+      "SwiftUI",
+      "Kotlin",
+      "Mobile UX"
+    ]
+  },
+  {
+    "id": "8",
+    "fullName": "James Davis",
+    "role": "Security Engineer",
+    "location": "San Francisco, CA",
+    "timezone": "UTC-8",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 88,
+    "lastActiveDate": "2024-05-14",
+    "performanceRating": 4,
+    "primarySkills": [
+      "OWASP",
+      "Penetration Testing",
+      "Identity",
+      "Docker"
+    ]
+  },
+  {
+    "id": "9",
+    "fullName": "Isabella Taylor",
+    "role": "Data Scientist",
+    "location": "Sydney, AU",
+    "timezone": "UTC+11",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 5,
+    "lastActiveDate": "2024-05-23",
+    "performanceRating": 3,
+    "primarySkills": [
+      "PyTorch",
+      "Scikit-learn",
+      "SQL",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": "10",
+    "fullName": "Lucas Anderson",
+    "role": "Elixir Developer",
+    "location": "Stockholm, SE",
+    "timezone": "UTC+2",
+    "availabilityStatus": "Limited",
+    "utilizationPercent": 50,
+    "lastActiveDate": "2024-05-12",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Elixir",
+      "Phoenix",
+      "GenStage",
+      "Docker"
+    ]
+  },
+  {
+    "id": "11",
+    "fullName": "Mia Johnson",
+    "role": "Cloud Architect",
+    "location": "New York, NY",
+    "timezone": "UTC-5",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 92,
+    "lastActiveDate": "2024-05-19",
+    "performanceRating": 4,
+    "primarySkills": [
+      "AWS Solutions Architecture",
+      "Microservices",
+      "Serverless"
+    ]
+  },
+  {
+    "id": "12",
+    "fullName": "William Smith",
+    "role": "QA Automation Lead",
+    "location": "Toronto, ON",
+    "timezone": "UTC-5",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 8,
+    "lastActiveDate": "2024-05-21",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Playwright",
+      "Jest",
+      "CI Pipelines",
+      "TDD"
+    ]
+  },
+  {
+    "id": "13",
+    "fullName": "Charlotte White",
+    "role": "Java Developer",
+    "location": "Amsterdam, NL",
+    "timezone": "UTC+2",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 100,
+    "lastActiveDate": "2024-05-16",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Spring Boot",
+      "Kafka",
+      "Microservices",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "id": "14",
+    "fullName": "Benjamin Miller",
+    "role": "Frontend Developer",
+    "location": "Portland, OR",
+    "timezone": "UTC-8",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 30,
+    "lastActiveDate": "2024-05-20",
+    "performanceRating": 3,
+    "primarySkills": [
+      "Vue.js",
+      "Pinia",
+      "Vite",
+      "CSS Custom Properties"
+    ]
+  },
+  {
+    "id": "15",
+    "fullName": "Amelia Moore",
+    "role": "PHP Developer",
+    "location": "Cape Town, ZA",
+    "timezone": "UTC+2",
+    "availabilityStatus": "Limited",
+    "utilizationPercent": 45,
+    "lastActiveDate": "2024-05-22",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Laravel",
+      "Symphony",
+      "MySQL",
+      "PHPUnit"
+    ]
+  },
+  {
+    "id": "16",
+    "fullName": "Oliver Wilson",
+    "role": "Go Engineer",
+    "location": "Tel Aviv, IL",
+    "timezone": "UTC+3",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 85,
+    "lastActiveDate": "2024-05-19",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Go",
+      "gRPC",
+      "Protobuf",
+      "Redis"
+    ]
+  },
+  {
+    "id": "17",
+    "fullName": "Harper Lee",
+    "role": "Full Stack Engineer",
+    "location": "Taipei, TW",
+    "timezone": "UTC+8",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 0,
+    "lastActiveDate": "2024-05-23",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind",
+      "Go"
+    ]
+  },
+  {
+    "id": "18",
+    "fullName": "Sebastian King",
+    "role": "UI Designer",
+    "location": "Lisbon, PT",
+    "timezone": "UTC+1",
+    "availabilityStatus": "Assigned",
+    "utilizationPercent": 98,
+    "lastActiveDate": "2024-05-18",
+    "performanceRating": 5,
+    "primarySkills": [
+      "Adobe XD",
+      "Protopie",
+      "Motion Design",
+      "SVG"
+    ]
+  },
+  {
+    "id": "19",
+    "fullName": "Evelyn Scott",
+    "role": "Data Engineer",
+    "location": "Dublin, IE",
+    "timezone": "UTC+1",
+    "availabilityStatus": "Limited",
+    "utilizationPercent": 65,
+    "lastActiveDate": "2024-05-15",
+    "performanceRating": 4,
+    "primarySkills": [
+      "Spark",
+      "Airflow",
+      "Snowflake",
+      "Python"
+    ]
+  },
+  {
+    "id": "20",
+    "fullName": "Jack Thompson",
+    "role": "React Architect",
+    "location": "Melbourne, AU",
+    "timezone": "UTC+11",
+    "availabilityStatus": "Available",
+    "utilizationPercent": 15,
+    "lastActiveDate": "2024-05-24",
+    "performanceRating": 5,
+    "primarySkills": [
+      "React Query",
+      "Redux",
+      "Architecture",
+      "TypeScript"
+    ]
+  }
+]

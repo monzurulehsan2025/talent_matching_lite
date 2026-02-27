@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "backend": "perl back-end-PERL/server.pl"
+    "backend": "python3 back-end-PYTHON/server.py",
+    "backend-python": "python3 back-end-PYTHON/server.py",
+    "backend-perl": "perl back-end-PERL/server.pl"
   },
   "dependencies": {
     "clsx": "^2.1.1",
